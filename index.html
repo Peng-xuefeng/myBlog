@@ -116,11 +116,19 @@
 <td align="left">xxx</td>
 </tr>
 </tbody></table>
-<h3 id="测试用例设计方法"><a href="#测试用例设计方法" class="headerlink" title="测试用例设计方法"></a>测试用例设计方法</h3>
+<h3 id="测试用例设计方法"><a href="#测试用例设计方法" class="headerlink" title="测试用例设计方法"></a>测试用例设计方法</h3><h4 id="场景设计法"><a href="#场景设计法" class="headerlink" title="场景设计法"></a>场景设计法</h4><p>在企业当中，几乎所有的产品软件都是用事件触发来控制业务流程的，事件触发时的情景形成场景，不同的顺序形成了事件流。<br>案例1：测试字母判定<br>要求： 第一列字符必须是A或B，第二列字符必须是一个数字，只有这样，允许修改文件<br>如果是第一列不符，给出L；如果是第二列不符合,给出M<br>基本事件流：  A||B —-》数字—–》修改文件<br>接下来就分别针对基本事件流的每个部分进行考虑，可以得到5条测试用例<br>A—-》数字—-》修改文件<br>B—-》数字—-》修改文件<br>非A 非B —-》L<br>A—-》非数字—-》M<br>B—-》非数字—-》M<br>这就是场景设计法<br>案例2： QQ安装<br>基本事件流： 点击setup.exe进入安装程序 —-》选择安装路径—-》同意协议 —-》安装</p>
+<ol>
+<li>点击setup.exe进入安装程序—-》选择默认路径 —-》 同意协议 —-》 安装</li>
+<li>点击setup.exe进入安装程序—-》选择自定义路径—-》同意协议—-》安装</li>
+<li>点击setup.exe进入安装程序—-》不填写路径</li>
+<li>点击setup.exe进入安装程序—-》选择安装路径—》不同意协议</li>
+<li>点击setup.exe进入安装程序—-》选择安装路劲—-》同意协议—-》取消安装<br>当然，在整个事件流测试用例设计中，也需要和等价类划分、边界值结合起来设计。<h4 id="等价类划分"><a href="#等价类划分" class="headerlink" title="等价类划分"></a>等价类划分</h4></li>
+</ol>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/08/DesignTestCase/" data-id="cl0i4i5vy0000l4vv0r1fhxmu" data-title="测试用例设计" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/08/DesignTestCase/" data-id="cl0iakkxs00001wvvhd7y96xv" data-title="测试用例设计" class="article-share-link">Share</a>
       
       
       
@@ -171,7 +179,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/05/hello-world/" data-id="cl0i4i5wk0001l4vv01ly54v9" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/05/hello-world/" data-id="cl0iakky300011wvvhjb81yaa" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
