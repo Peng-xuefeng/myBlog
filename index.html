@@ -122,7 +122,7 @@
 <li>点击setup.exe进入安装程序—-》选择自定义路径—-》同意协议—-》安装</li>
 <li>点击setup.exe进入安装程序—-》不填写路径</li>
 <li>点击setup.exe进入安装程序—-》选择安装路径—》不同意协议</li>
-<li>点击setup.exe进入安装程序—-》选择安装路劲—-》同意协议—-》取消安装<br>当然，在整个事件流测试用例设计中，也需要和等价类划分、边界值结合起来设计。<h4 id="等价类划分"><a href="#等价类划分" class="headerlink" title="等价类划分"></a>等价类划分</h4>我们把被测对象输入的数据叫做等价类，能符合被测对象要求的叫做有效等价类，不符合要求的叫做无效等价类。通过具体的<br>例子来了解。</li>
+<li>点击setup.exe进入安装程序—-》选择安装路劲—-》同意协议—-》取消安装<br>当然，在整个事件流测试用例设计中，也需要和等价类划分、边界值结合起来设计。<h4 id="等价类划分"><a href="#等价类划分" class="headerlink" title="等价类划分"></a>等价类划分</h4>我们把被测对象输入的数据叫做等价类，能符合被测对象要求的叫做有效等价类，不符合要求的叫做无效等价类。通过具体的例子来了解。</li>
 </ol>
 <p>1.客户名字必须由汉字组成，那么汉字就是有效等价类，非汉字就是无效等价类<br>2.客户的名字长度必须是5-10位，那么 5-10位就是有效等价类，小于5或者大于10就是无效等价类<br>案例：邮箱注册<br>用户名为6-18个字符构成，包括字母、数字、下划线;<br>用户名以字母开头，字母或者数字结尾，不区分大小写<br>密码不能为空，确认密码需要和密码一致。</p>
 <html>
@@ -149,21 +149,21 @@
      </tr>
      <tr>
      <td>输入空字符</td>
-     <td>高<td>
+     <td>高</td>
      <td>提示不符合长度要求</td>
      <td>xxx</td>
      <td>xxx</td>
      </tr>
      <tr>
      <td>输入小于6个字符</td>
-     <td>高<td>
+     <td>高</td>
      <td>提示不符合长度要求</td>
      <td>xxx</td>
      <td>xxx</td>
      </tr>
      <tr>
-     <td>1.输入大于18个字符</td>
-     <td>高<td>
+     <td>输入大于18个字符</td>
+     <td>高</td>
      <td>提示不符合长度要求</td>
      <td>xxx</td>
      <td>xxx</td>
@@ -185,42 +185,42 @@
      </tr>
       <tr>
      <td>只有下划线</td>
-     <td>高<td>
+     <td>高</td>
      <td>提示不符合要求</td>
      <td>xxx</td>
      <td>xxx</td>
      </tr>
      <tr>
      <td>数字、字母、下划线</td>
-     <td>高<td>
+     <td>高</td>
      <td>提示符合要求</td>
      <td>xxx</td>
      <td>xxx</td>
      </tr>
      <tr>
      <td>数字、字母</td>
-     <td>高<td>
+     <td>高</td>
      <td>提示不符合要求</td>
      <td>xxx</td>
      <td>xxx</td>
      </tr>
      <tr>
      <td>数字、下划线</td>
-     <td>高<td>
+     <td>高</td>
      <td>提示不符合要求</td>
      <td>xxx</td>
      <td>xxx</td>
      </tr>
      <tr>
      <td>字母、下划线</td>
-     <td>高<td>
+     <td>高</td>
      <td>提示不符合要求</td>
      <td>xxx</td>
      <td>xxx</td>
      </tr>
      <tr>
      <td>包含其他特殊符号</td>
-     <td>高<td>
+     <td>高</td>
      <td>提示不符合要求</td>
      <td>xxx</td>
      <td>xxx</td>
@@ -228,42 +228,42 @@
      <tr>
      <td rowspan='6'>组成位置</td>
      <td>字母开头、字母结尾</td>
-     <td>高<td>
+     <td>高</td>
      <td>提示不符合要求</td>
      <td>xxx</td>
      <td>xxx</td>
      </tr>
     <tr>
      <td>字母开头、数字结尾</td>
-     <td>高<td>
+     <td>高</td>
      <td>提示不符合要求</td>
      <td>xxx</td>
      <td>xxx</td>
      </tr>
      <tr>
      <td>字母开头、非数字字母结尾</td>
-     <td>高<td>
+     <td>高</td>
      <td>提示不符合要求</td>
      <td>xxx</td>
      <td>xxx</td>
      </tr>
      <tr>
      <td>数字开头</td>
-     <td>高<td>
+     <td>高</td>
      <td>提示不符合要求</td>
      <td>xxx</td>
      <td>xxx</td>
      </tr>
      <tr>
      <td>下划线开头</td>
-     <td>高<td>
+     <td>高</td>
      <td>提示不符合要求</td>
      <td>xxx</td>
      <td>xxx</td>
      </tr>
      <tr>
      <td>其他特殊符号开头</td>
-     <td>高<td>
+     <td>高</td>
      <td>提示不符合要求</td>
      <td>xxx</td>
      <td>xxx</td>
@@ -272,14 +272,14 @@
      <td rowspan='2'>密码</td>
      <td rowspan='2'>是否为空</td>
      <td>空密码</td>
-     <td>高<td>
+     <td>高</td>
      <td>提示密码不能为空</td>
      <td>xxx</td>
      <td>xxx</td>
      </tr>
      <tr>
      <td>非空密码</td>
-     <td>高<td>
+     <td>高</td>
      <td>提示正确</td>
      <td>xxx</td>
      <td>xxx</td>
@@ -288,14 +288,14 @@
      <td rowspan='2'>确认密码</td>
      <td rowspan='2'>是否一致</td>
      <td>确认密码与密码一致</td>
-     <td>高<td>
+     <td>高</td>
      <td>提示正确</td>
      <td>xxx</td>
      <td>xxx</td>
      </tr>
      <tr>
      <td>确认密码与密码不一致</td>
-     <td>高<td>
+     <td>高</td>
      <td>提示不一致</td>
      <td>xxx</td>
      <td>xxx</td>
@@ -306,7 +306,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/08/DesignTestCase/" data-id="cl0nvk0m10000gsvvhggt3vwp" data-title="测试用例设计" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/08/DesignTestCase/" data-id="cl0nwlny7000040vv07r04ypx" data-title="测试用例设计" class="article-share-link">Share</a>
       
       
       
@@ -357,7 +357,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/05/hello-world/" data-id="cl0nvk0mb0001gsvvhdl77zvw" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/05/hello-world/" data-id="cl0nwlnyi000140vveqfx4ry7" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
