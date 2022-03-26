@@ -98,7 +98,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/20/SQL_Administration/" data-id="cl12axbdw00038cvv6k4t0x3c" data-title="SQL Server管理" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/20/SQL_Administration/" data-id="cl17zaim700050svv0bcfhlov" data-title="SQL Server管理" class="article-share-link">Share</a>
       
       
       
@@ -146,7 +146,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/SCM/" data-id="cl12axbdy00058cvv6hkj82v8" data-title="Jenkins应用" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/SCM/" data-id="cl17zaim600040svv04s5hm8r" data-title="Jenkins应用" class="article-share-link">Share</a>
       
       
       
@@ -196,7 +196,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/AutoTest_TestCafe/" data-id="cl12axbdn00008cvvbpa90dlr" data-title="Test Cafe自动化测试框架讲解" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/AutoTest_TestCafe/" data-id="cl17zailx00000svv6r04c30t" data-title="Test Cafe自动化测试框架讲解" class="article-share-link">Share</a>
       
       
       
@@ -237,7 +237,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/BuildEnviroment/" data-id="cl12axbdt00018cvv3y4q6uiw" data-title="测试环境搭建" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/BuildEnviroment/" data-id="cl17zaim200010svvd2jsd11c" data-title="测试环境搭建" class="article-share-link">Share</a>
       
       
       
@@ -288,7 +288,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/TestProcedure/" data-id="cl12axbe500068cvv1hxtcoy7" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/TestProcedure/" data-id="cl17zaim500030svv0wrpegoq" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -533,11 +533,109 @@
 </html>
 
 <h4 id="边界值"><a href="#边界值" class="headerlink" title="边界值"></a>边界值</h4><p>边界值常常与等价类划分联合使用，边界值考虑三个点，我们用6-18来说明<br>上点： 边界上的点<br>6和18就是输入域6-18边界上的点<br>离点： 离边界值最近的一个点<br>对于6-18来讲的话，如果是闭合区间，那么离点在外 5和19; 如果是开区间，那么离点在内 7和17<br>内点： 就是输入域中随意的值  比如 11</p>
-<h4 id="判定表"><a href="#判定表" class="headerlink" title="判定表"></a>判定表</h4><h4 id="因果图"><a href="#因果图" class="headerlink" title="因果图"></a>因果图</h4><h4 id="正交法"><a href="#正交法" class="headerlink" title="正交法"></a>正交法</h4>
+<h4 id="判定表"><a href="#判定表" class="headerlink" title="判定表"></a>判定表</h4><p>判定表非常适合那种有多个条件的场景，看个案例<br>案例1: 读书选择<br>疲倦是1 不疲倦是0  感兴趣 1 不感兴趣0  迷糊 1  不迷糊 0<br>1.觉得疲倦，但对书的内容感兴趣，同时书中的内容让你迷糊，回到本章重读<br>2.觉得疲倦，但对书中内容感兴趣，同时书中的内容不让你迷糊，继续读下去<br>3.不觉得疲倦并且对书的内容感兴趣，但是书中的内容让你迷糊的话，回到本章重读<br>4.觉得疲倦并且对书中的内容不感兴趣，同时书中的内容不让你迷糊，停止阅读，请休息<br>5.觉得疲倦并且对书中的内容不感兴趣，同时书中的内容让你迷糊，停止阅读，休息<br>6.不疲倦，对书中的内容感兴趣，书中内容不糊涂，继续阅读下去<br>7.不疲倦，不感兴趣，书中内容糊涂，跳到下一章阅读<br>8.不疲倦，不感兴趣，书中的内容不糊涂，跳到下一章阅读<br>我们看下这个需求，它就是由很多的条件组成，最后根据这些条件产生一个动作，这非常符合判定表的场景</p>
+<html>
+<table border='1' frame='box'>
+     <tr>
+     <th></th>
+     <th></th>
+     <th>1</th>
+     <th>2</th>
+     <th>3</th>
+     <th>4</th>
+     <th>5</th>
+     <th>6</th>
+     <th>7</th>
+     <th>8</th>
+     </tr>
+     <tr>
+     <td rowspan='3'>条件</td>
+     <td >是否疲倦</td>
+     <td >1</td>
+     <td>1</td>
+     <td>0</td>
+     <td>1</td>
+     <td>1</td>
+     <td>0</td>
+     <td>0</td>
+     <td>0</td>
+     </tr>
+     <tr>
+     <td>是否感兴趣</td>
+     <td>1</td>
+     <td>1</td>
+     <td>1</td>
+     <td>0</td>
+     <td>0</td>
+     <td>1</td>
+     <td>0</td>
+     <td>0</td>
+     </tr>
+     <tr>
+     <td>是否糊涂</td>
+     <td>1</td>
+     <td>0</td>
+     <td>1</td>
+     <td>0</td>
+     <td>1</td>
+     <td>0</td>
+     <td>1</td>
+     <td>0</td>
+     </tr>
+     <tr>
+     <td rowspan='4'>结果</td>
+     <td>本章重读</td>
+     <td>1</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     </tr>
+     <tr>
+     <td>继续读</td>
+     <td>1</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     </tr>
+     <tr>
+     <td>停止阅读</td>
+     <td>1</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     </tr>
+      <tr>
+     <td>跳到下一章</td>
+     <td>1</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     </tr>
+</table>
+</html>
+
+
+<h4 id="因果图"><a href="#因果图" class="headerlink" title="因果图"></a>因果图</h4><h4 id="正交法"><a href="#正交法" class="headerlink" title="正交法"></a>正交法</h4>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/08/DesignTestCase/" data-id="cl12axbdv00028cvvcjzle5pi" data-title="测试用例设计" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/08/DesignTestCase/" data-id="cl17zaim400020svv7nsz5g38" data-title="测试用例设计" class="article-share-link">Share</a>
       
       
       
@@ -588,7 +686,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/05/hello-world/" data-id="cl12axbdx00048cvv45ry7o0j" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/05/hello-world/" data-id="cl17zaim800060svv77zucctk" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
