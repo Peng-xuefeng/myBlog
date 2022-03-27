@@ -14,7 +14,7 @@
 <meta property="og:description" content="测试用例包含内容软件测试活动中，最重要的内容就是测试用例，我们首先看一下测试用例包含什么内容，各个企业要求点可能有所差异，但核心部分大致相同。1.功能模块(测试项) ： 对应的产品功能模块是哪部分2.检查项(测试标题) ： 检查的项目是哪个类别，比如说是特殊符号类等等3.重要级别：  测试用例的优先级   高&#x2F;中等&#x2F;低4.操作步骤：  如何完成这个测试，比如 首先输入123，然">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-03-08T15:02:00.000Z">
-<meta property="article:modified_time" content="2022-03-26T15:25:36.410Z">
+<meta property="article:modified_time" content="2022-03-27T06:56:14.769Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -402,13 +402,72 @@
      </tr>
 </table>
 </html>
+有的书上会教判定表合并，我个人觉得不超过10条的，就不用合并了，容易漏掉用例，合并规则就是找相同的结果并且条件有且只有一个不同的。比如 7 8 结果都是1
+条件里只有一个不同，那就合成一条就行。 
 
-
-<h4 id="因果图"><a href="#因果图" class="headerlink" title="因果图"></a>因果图</h4><h4 id="正交法"><a href="#正交法" class="headerlink" title="正交法"></a>正交法</h4>
+<h4 id="因果图"><a href="#因果图" class="headerlink" title="因果图"></a>因果图</h4><p>案例1： 预售房预售资金监管账户网签号校验<br>对网签号格式进行验证，必须符合Y+7位数字格式，如Y2014678，如果符合要求，则可以验证成功，若第一列不是Y，则提示”网签格式错误”，如果后7位非数字，则提示”无此网签号”。<br>因果图需要理清输入和输出，输入和输入的逻辑关系<br>C1： 第一列是Y<br>C2： 其他7位是数字<br>E1： 网签号格式错误<br>E:   成功验证<br>E2： 无此网签号<br>所以可以得到  E&#x3D;and(C1,C2)  E1&#x3D;not(C1)  E2&#x3D;not(C2)根据因果图设计判定表如下</p>
+<html>
+<table border='1' frame='box'>
+     <tr>
+     <th></th>
+     <th></th>
+     <th>1</th>
+     <th>2</th>
+     <th>3</th>
+     <th>4</th>
+     </tr>
+     <tr>
+     <td rowspan='2'>原因(输入)</td>
+     <td >第一列是Y</td>
+     <td >0</td>
+     <td>0</td>
+     <td>1</td>
+     <td>1</td>
+     </tr>
+     <tr>
+     <td>7位数字/td>
+     <td>0</td>
+     <td>1</td>
+     <td>0</td>
+     <td>1</td>
+     </tr>
+     <tr>
+     <td rowspan="3">影响(输出)</td>
+     <td>成功验证</td>
+     <td>0</td>
+     <td>1</td>
+     <td>0</td>
+     <td>1</td>
+     <td>0</td>
+     <td>1</td>
+     <td>0</td>
+     </tr>
+     <tr>
+     <td>网签格式错误</td>
+     <td>1</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     </tr>
+     <tr>
+     <td>无此网签号</td>
+     <td>-</td>
+     <td>1</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>1</td>
+     <td>-</td>
+     <td>-</td>
+     </tr>
+</table>
+</html>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/08/DesignTestCase/" data-id="cl1808e4u0002msvvdswi3yvu" data-title="测试用例设计" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/08/DesignTestCase/" data-id="cl18xj3s40001s8vv2a555rgp" data-title="测试用例设计" class="article-share-link">Share</a>
       
       
       

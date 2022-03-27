@@ -98,7 +98,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/20/SQL_Administration/" data-id="cl1808e4x0004msvv3vyj2ggf" data-title="SQL Server管理" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/20/SQL_Administration/" data-id="cl18xj3s90003s8vvglaaf5jr" data-title="SQL Server管理" class="article-share-link">Share</a>
       
       
       
@@ -146,7 +146,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/SCM/" data-id="cl1808e4w0003msvvg0kwg4q1" data-title="Jenkins应用" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/SCM/" data-id="cl18xj3sa0004s8vv4lymgh01" data-title="Jenkins应用" class="article-share-link">Share</a>
       
       
       
@@ -196,7 +196,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/AutoTest_TestCafe/" data-id="cl1808e4l0000msvvaul34wib" data-title="Test Cafe自动化测试框架讲解" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/AutoTest_TestCafe/" data-id="cl18xj3ry0000s8vv2f5fdv6a" data-title="Test Cafe自动化测试框架讲解" class="article-share-link">Share</a>
       
       
       
@@ -237,7 +237,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/BuildEnviroment/" data-id="cl1808e4q0001msvvd8yq0zel" data-title="测试环境搭建" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/BuildEnviroment/" data-id="cl18xj3s70002s8vvgohc0ctd" data-title="测试环境搭建" class="article-share-link">Share</a>
       
       
       
@@ -288,7 +288,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/TestProcedure/" data-id="cl1808e4y0005msvv37js7iz6" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/TestProcedure/" data-id="cl18xj3sb0005s8vvbhwra2hi" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -629,13 +629,72 @@
      </tr>
 </table>
 </html>
+有的书上会教判定表合并，我个人觉得不超过10条的，就不用合并了，容易漏掉用例，合并规则就是找相同的结果并且条件有且只有一个不同的。比如 7 8 结果都是1
+条件里只有一个不同，那就合成一条就行。 
 
-
-<h4 id="因果图"><a href="#因果图" class="headerlink" title="因果图"></a>因果图</h4><h4 id="正交法"><a href="#正交法" class="headerlink" title="正交法"></a>正交法</h4>
+<h4 id="因果图"><a href="#因果图" class="headerlink" title="因果图"></a>因果图</h4><p>案例1： 预售房预售资金监管账户网签号校验<br>对网签号格式进行验证，必须符合Y+7位数字格式，如Y2014678，如果符合要求，则可以验证成功，若第一列不是Y，则提示”网签格式错误”，如果后7位非数字，则提示”无此网签号”。<br>因果图需要理清输入和输出，输入和输入的逻辑关系<br>C1： 第一列是Y<br>C2： 其他7位是数字<br>E1： 网签号格式错误<br>E:   成功验证<br>E2： 无此网签号<br>所以可以得到  E&#x3D;and(C1,C2)  E1&#x3D;not(C1)  E2&#x3D;not(C2)根据因果图设计判定表如下</p>
+<html>
+<table border='1' frame='box'>
+     <tr>
+     <th></th>
+     <th></th>
+     <th>1</th>
+     <th>2</th>
+     <th>3</th>
+     <th>4</th>
+     </tr>
+     <tr>
+     <td rowspan='2'>原因(输入)</td>
+     <td >第一列是Y</td>
+     <td >0</td>
+     <td>0</td>
+     <td>1</td>
+     <td>1</td>
+     </tr>
+     <tr>
+     <td>7位数字/td>
+     <td>0</td>
+     <td>1</td>
+     <td>0</td>
+     <td>1</td>
+     </tr>
+     <tr>
+     <td rowspan="3">影响(输出)</td>
+     <td>成功验证</td>
+     <td>0</td>
+     <td>1</td>
+     <td>0</td>
+     <td>1</td>
+     <td>0</td>
+     <td>1</td>
+     <td>0</td>
+     </tr>
+     <tr>
+     <td>网签格式错误</td>
+     <td>1</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     </tr>
+     <tr>
+     <td>无此网签号</td>
+     <td>-</td>
+     <td>1</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>1</td>
+     <td>-</td>
+     <td>-</td>
+     </tr>
+</table>
+</html>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/08/DesignTestCase/" data-id="cl1808e4u0002msvvdswi3yvu" data-title="测试用例设计" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/08/DesignTestCase/" data-id="cl18xj3s40001s8vv2a555rgp" data-title="测试用例设计" class="article-share-link">Share</a>
       
       
       
@@ -686,7 +745,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/05/hello-world/" data-id="cl1808e4z0006msvvdmzme8mp" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/05/hello-world/" data-id="cl18xj3sc0006s8vvahx2cyz2" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
