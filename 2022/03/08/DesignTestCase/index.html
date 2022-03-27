@@ -14,7 +14,7 @@
 <meta property="og:description" content="测试用例包含内容软件测试活动中，最重要的内容就是测试用例，我们首先看一下测试用例包含什么内容，各个企业要求点可能有所差异，但核心部分大致相同。1.功能模块(测试项) ： 对应的产品功能模块是哪部分2.检查项(测试标题) ： 检查的项目是哪个类别，比如说是特殊符号类等等3.重要级别：  测试用例的优先级   高&#x2F;中等&#x2F;低4.操作步骤：  如何完成这个测试，比如 首先输入123，然">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-03-08T15:02:00.000Z">
-<meta property="article:modified_time" content="2022-03-27T07:43:24.656Z">
+<meta property="article:modified_time" content="2022-03-27T08:40:00.786Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -455,10 +455,89 @@
      </tr>
 </table>
 </html>
+
+<h4 id="正交实验法"><a href="#正交实验法" class="headerlink" title="正交实验法"></a>正交实验法</h4><p>正交法核心内容  因子、水平<br>案例1：<br>现在有一个Web网站，该网站存在不同的服务器和操作系统配置，并且支持用户使用不同的浏览器及插件访问该网站,设计兼容测试用例<br>Web浏览器：Chrome,firefox,Edge<br>插件: 无,RealPlayer,Media Player<br>应用服务器： IIS、Apache、NetScape Enterprise<br>操作系统： Windows 2000、Linux、Windows NT<br>如果你想全覆盖，那总测试用例 3<em>3</em>3*3&#x3D;81条，这在实际测试活动中是不可能的，我们采取正交法设计<br>这是一个4因子 3水平的正交表<br>我们打开SPSSAU这个在线生成正交表的网站，输入因子数和水平数，可以自动生成一张正交表</p>
+<html>
+<table border='1' frame='box'>
+     <tr>
+     <td colspan='5'>正交设计表</td>
+     </tr>
+     <tr>
+     <td>编号</td>
+     <td>Web浏览器</td>
+     <td>插件</td>
+     <td>应用服务器</td>
+     <td>操作系统</td>
+     </tr>
+     <tr>
+     <td>1</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     </tr>
+     <tr>
+     <td>2</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     </tr>
+     <tr>
+     <td>3</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     </tr>
+     <tr>
+     <td>4</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     </tr>
+     <tr>
+     <td>5</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     </tr>
+     <tr>
+     <td>6</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     </tr>
+     <tr>
+     <td>7</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     </tr>
+     <tr>
+     <td>8</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     </tr>
+     <td>9</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     <td>-</td>
+     </tr>
+</table>
+</html>
+测试用例设计就整理到这个，我个人在工作中还是比较喜欢场景、等价类、边界值结合起来设计
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/08/DesignTestCase/" data-id="cl18z6doq0002o8vvao389aws" data-title="测试用例设计" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/08/DesignTestCase/" data-id="cl1917gd8000498vv3ydy2f2c" data-title="测试用例设计" class="article-share-link">Share</a>
       
       
       
