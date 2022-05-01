@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>Test Cafe自动化测试框架讲解 | Hexo</title>
+  <title>MySQL | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;  More info: Writing Run server1$ hexo server  More info: Server Generate static files1$ hexo generate  More info: Generating Deploy to r">
+  <meta name="description" content="安装配置mysql我们一般用ZIP文件,直接配置就行了,解压完就是安装完.官网下载界面,会看到两个,一个是带web-installer 这个表示需要联网安装,另一个不需要联网安装。我们简单介绍下ZIP文件夹的内容bin ：可执行文件存放docs: 文档include： .h头文件  (mysql是C语言写的)lib:  C语言库文件share:  字符集相关信息COPYING：版本信息Readme">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Test Cafe自动化测试框架讲解">
-<meta property="og:url" content="https://peng-xuefeng.github.io/myBlog/2022/03/12/AutoTest_TestCafe/index.html">
+<meta property="og:title" content="MySQL">
+<meta property="og:url" content="https://peng-xuefeng.github.io/myBlog/2022/03/30/TSQL/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;  More info: Writing Run server1$ hexo server  More info: Server Generate static files1$ hexo generate  More info: Generating Deploy to r">
+<meta property="og:description" content="安装配置mysql我们一般用ZIP文件,直接配置就行了,解压完就是安装完.官网下载界面,会看到两个,一个是带web-installer 这个表示需要联网安装,另一个不需要联网安装。我们简单介绍下ZIP文件夹的内容bin ：可执行文件存放docs: 文档include： .h头文件  (mysql是C语言写的)lib:  C语言库文件share:  字符集相关信息COPYING：版本信息Readme">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-03-12T15:14:32.480Z">
-<meta property="article:modified_time" content="2022-03-22T15:33:20.369Z">
+<meta property="article:published_time" content="2022-03-30T15:24:21.471Z">
+<meta property="article:modified_time" content="2022-04-30T16:15:27.556Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -73,10 +73,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-AutoTest_TestCafe" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-TSQL" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/myBlog/2022/03/12/AutoTest_TestCafe/" class="article-date">
-  <time class="dt-published" datetime="2022-03-12T15:14:32.480Z" itemprop="datePublished">2022-03-12</time>
+    <a href="/myBlog/2022/03/30/TSQL/" class="article-date">
+  <time class="dt-published" datetime="2022-03-30T15:24:21.471Z" itemprop="datePublished">2022-03-30</time>
 </a>
     
   </div>
@@ -87,7 +87,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      Test Cafe自动化测试框架讲解
+      MySQL
     </h1>
   
 
@@ -95,23 +95,12 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <h4 id="安装配置mysql"><a href="#安装配置mysql" class="headerlink" title="安装配置mysql"></a>安装配置mysql</h4><p>我们一般用ZIP文件,直接配置就行了,解压完就是安装完.<br>官网下载界面,会看到两个,一个是带web-installer 这个表示需要联网安装,另一个不需要联网安装。<br>我们简单介绍下ZIP文件夹的内容<br>bin ：可执行文件存放<br>docs: 文档<br>include： .h头文件  (mysql是C语言写的)<br>lib:  C语言库文件<br>share:  字符集相关信息<br>COPYING：版本信息<br>Readme： 开源协议<br>第一步：<br>配置环境变量： 为了方便在任何盘符下使用Bin文件下的可执行文件<br>%MYSQL_HOME%  : D:\mysql-5.7.24<br>Path: %MYSQL_HOME%\bin<br>第二步：新建配置文件  my.ini (Home路径下)<br>字符集的信息和存储引擎的信息<br>[mysql]<br>default-character-set&#x3D;utf8<br>[mysqld]<br>character-set-server&#x3D;utf8<br>default-storage-engine&#x3D;INNODB<br>sql-mode&#x3D;STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION<br>注意下这里的txt文件要保存成utf-8  文件类型选*<br>第三步：初始化mysql<br>mysqld  –initialize-insecure (管理员方式)<br>成功后不会返回信息。但在你的mysql home目录，会生成一个data文件夹，这就表示成功了(存放的mysql数据库信息)<br>第四步： 注册mysql服务<br>mysqld -install<br>（返回services成功安装），这个命令就是将mysql安装成windows service，这样开启就能启动了<br>第五步：<br>启动mysql<br>net start mysql  &#x2F;&#x2F; net stop mysql<br>到这个步骤，mysql其实已经完成了。这时候，我的电脑可以叫做mysql服务器<br>第六步：<br>修改账户名默认密码<br>mysqladmin -u root password demo12!@</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/AutoTest_TestCafe/" data-id="cl2mnop6p0001ycvv5bzdhr6h" data-title="Test Cafe自动化测试框架讲解" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/30/TSQL/" data-id="cl2mnop6v0007ycvv0tc49v3d" data-title="MySQL" class="article-share-link">Share</a>
       
       
       
@@ -121,19 +110,10 @@
     
 <nav id="article-nav">
   
-    <a href="/myBlog/2022/03/12/SCM/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Jenkins应用
-        
-      </div>
-    </a>
   
-  
-    <a href="/myBlog/2022/03/12/BuildEnviroment/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/myBlog/2022/03/30/Postman/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">测试环境搭建</div>
+      <div class="article-nav-title">Postman</div>
     </a>
   
 </nav>

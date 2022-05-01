@@ -71,6 +71,83 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-TSQL" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/myBlog/2022/03/30/TSQL/" class="article-date">
+  <time class="dt-published" datetime="2022-03-30T15:24:21.471Z" itemprop="datePublished">2022-03-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/myBlog/2022/03/30/TSQL/">MySQL</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="安装配置mysql"><a href="#安装配置mysql" class="headerlink" title="安装配置mysql"></a>安装配置mysql</h4><p>我们一般用ZIP文件,直接配置就行了,解压完就是安装完.<br>官网下载界面,会看到两个,一个是带web-installer 这个表示需要联网安装,另一个不需要联网安装。<br>我们简单介绍下ZIP文件夹的内容<br>bin ：可执行文件存放<br>docs: 文档<br>include： .h头文件  (mysql是C语言写的)<br>lib:  C语言库文件<br>share:  字符集相关信息<br>COPYING：版本信息<br>Readme： 开源协议<br>第一步：<br>配置环境变量： 为了方便在任何盘符下使用Bin文件下的可执行文件<br>%MYSQL_HOME%  : D:\mysql-5.7.24<br>Path: %MYSQL_HOME%\bin<br>第二步：新建配置文件  my.ini (Home路径下)<br>字符集的信息和存储引擎的信息<br>[mysql]<br>default-character-set&#x3D;utf8<br>[mysqld]<br>character-set-server&#x3D;utf8<br>default-storage-engine&#x3D;INNODB<br>sql-mode&#x3D;STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION<br>注意下这里的txt文件要保存成utf-8  文件类型选*<br>第三步：初始化mysql<br>mysqld  –initialize-insecure (管理员方式)<br>成功后不会返回信息。但在你的mysql home目录，会生成一个data文件夹，这就表示成功了(存放的mysql数据库信息)<br>第四步： 注册mysql服务<br>mysqld -install<br>（返回services成功安装），这个命令就是将mysql安装成windows service，这样开启就能启动了<br>第五步：<br>启动mysql<br>net start mysql  &#x2F;&#x2F; net stop mysql<br>到这个步骤，mysql其实已经完成了。这时候，我的电脑可以叫做mysql服务器<br>第六步：<br>修改账户名默认密码<br>mysqladmin -u root password demo12!@</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/30/TSQL/" data-id="cl2mnop6v0007ycvv0tc49v3d" data-title="MySQL" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Postman" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/myBlog/2022/03/30/Postman/" class="article-date">
+  <time class="dt-published" datetime="2022-03-30T14:59:16.067Z" itemprop="datePublished">2022-03-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/myBlog/2022/03/30/Postman/">Postman</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/30/Postman/" data-id="cl2mnop6s0004ycvv2k1m22ui" data-title="Postman" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-SQL_Administration" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/myBlog/2022/03/20/SQL_Administration/" class="article-date">
@@ -98,7 +175,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/20/SQL_Administration/" data-id="cl192dtrp00066gvvhnv79w4d" data-title="SQL Server管理" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/20/SQL_Administration/" data-id="cl2mnop6u0006ycvvbc3o2zft" data-title="SQL Server管理" class="article-share-link">Share</a>
       
       
       
@@ -146,7 +223,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/SCM/" data-id="cl192dtrh00036gvv1v48e7qc" data-title="Jenkins应用" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/SCM/" data-id="cl2mnop6q0002ycvv707g4aqq" data-title="Jenkins应用" class="article-share-link">Share</a>
       
       
       
@@ -196,7 +273,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/AutoTest_TestCafe/" data-id="cl192dtr900006gvvdhqf3gv1" data-title="Test Cafe自动化测试框架讲解" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/AutoTest_TestCafe/" data-id="cl2mnop6p0001ycvv5bzdhr6h" data-title="Test Cafe自动化测试框架讲解" class="article-share-link">Share</a>
       
       
       
@@ -237,7 +314,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/BuildEnviroment/" data-id="cl192dtre00016gvv6yd87h4o" data-title="测试环境搭建" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/BuildEnviroment/" data-id="cl2mnop6k0000ycvvfcjj8jvt" data-title="测试环境搭建" class="article-share-link">Share</a>
       
       
       
@@ -288,7 +365,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/TestProcedure/" data-id="cl192dtri00046gvv9km0ewtz" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/12/TestProcedure/" data-id="cl2mnop6x0008ycvv9m0rc1t4" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -841,7 +918,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/08/DesignTestCase/" data-id="cl192dtrg00026gvv8ybncp9b" data-title="测试用例设计" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/08/DesignTestCase/" data-id="cl2mnop6r0003ycvvaiofc2yg" data-title="测试用例设计" class="article-share-link">Share</a>
       
       
       
@@ -892,7 +969,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/05/hello-world/" data-id="cl192dtrj00056gvv3pl0doix" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="https://peng-xuefeng.github.io/myBlog/2022/03/05/hello-world/" data-id="cl2mnop6t0005ycvv1swo915v" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -935,6 +1012,14 @@
       <ul>
         
           <li>
+            <a href="/myBlog/2022/03/30/TSQL/">MySQL</a>
+          </li>
+        
+          <li>
+            <a href="/myBlog/2022/03/30/Postman/">Postman</a>
+          </li>
+        
+          <li>
             <a href="/myBlog/2022/03/20/SQL_Administration/">SQL Server管理</a>
           </li>
         
@@ -944,14 +1029,6 @@
         
           <li>
             <a href="/myBlog/2022/03/12/AutoTest_TestCafe/">Test Cafe自动化测试框架讲解</a>
-          </li>
-        
-          <li>
-            <a href="/myBlog/2022/03/12/BuildEnviroment/">测试环境搭建</a>
-          </li>
-        
-          <li>
-            <a href="/myBlog/2022/03/12/TestProcedure/">Hello World</a>
           </li>
         
       </ul>
